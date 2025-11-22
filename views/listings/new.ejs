@@ -1,0 +1,113 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+      <!-- Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label"><b>Title</b></label>
+        <input name="listing[title]" type="text" class="form-control" placeholder="add a catchy title" required>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label"><b>Description</b></label>
+        <textarea name="listing[description]" id="description" class="form-control" required></textarea>
+      </div>
+
+      <!-- Image -->
+      <div class="mb-3">
+        <label for="image" class="form-label"><b>Upload Listing Image</b></label>
+        <input name="listing[image]" type="file" class="form-control" required>
+      </div>
+
+      <!-- Price + Country -->
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label"><b>Price</b></label>
+          <input name="listing[price]" type="number" placeholder="1200" class="form-control" required>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label"><b>Country</b></label>
+          <input name="listing[country]" type="text" placeholder="India" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label"><b>Location</b></label>
+        <input name="listing[location]" type="text" placeholder="Jaipur, Rajasthan" class="form-control" required>
+      </div>
+
+      <!-- Categories -->
+      <div class="mb-3">
+        <p><b>Choose a Category</b></p>
+
+        <div class="category">
+
+          <div>
+            <input type="checkbox" id="Trending" name="listing[category][]" value="Trending">
+            <label for="Trending">🔥 Trending</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Rooms" name="listing[category][]" value="Rooms">
+            <label for="Rooms">🛏️ Rooms</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="IconicCities" name="listing[category][]" value="Iconic Cities">
+            <label for="IconicCities">🏙️ Iconic Cities</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Mountains" name="listing[category][]" value="Mountains">
+            <label for="Mountains">🏔️ Mountains</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Castles" name="listing[category][]" value="Castles">
+            <label for="Castles">🏰 Castles</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="AmazingsPools" name="listing[category][]" value="Amazings Pools">
+            <label for="AmazingsPools">🏊 Amazings Pools</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Camping" name="listing[category][]" value="Camping">
+            <label for="Camping">🏕️ Camping</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Farms" name="listing[category][]" value="Farms">
+            <label for="Farms">🚜 Farms</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Arctic" name="listing[category][]" value="Arctic">
+            <label for="Arctic">❄ Arctic</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Domes" name="listing[category][]" value="Domes">
+            <label for="Domes">🏚️ Domes</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Boats" name="listing[category][]" value="Boats">
+            <label for="Boats">⛵ Boats</label>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="btn btn-dark add-btn mt-1" style="margin-left: 22rem;">Add</button>
+    </form>
+  </div>
+</div>

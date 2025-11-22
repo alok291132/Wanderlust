@@ -1,0 +1,64 @@
+<style>
+
+</style>
+
+<nav class="wl-nav" id="wlNav">
+  <!-- Brand + Explore -->
+  <div style="display:flex; align-items:center;">
+    <a class="wl-brand" href="/listings" aria-label="Home">
+      <i class="fa-brands fa-airbnb"></i>
+    </a>
+    <a class="wl-explore" href="/listings">Explore</a>
+  </div>
+
+  <!-- Centered search -->
+  <form role="search" action="/input" class="wl-search" method="get">
+    <input class="wl-search-inp" name="search" type="search" placeholder="Search destinations" />
+    <button class="wl-search-btn" type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i> Search
+    </button>
+  </form>
+
+  <!-- Right-end toggler -->
+  <button class="wl-toggler" id="wlToggler" aria-expanded="false" aria-controls="wlMenu" aria-label="Toggle navigation">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <!-- Menu -->
+  <div class="wl-menu" id="wlMenu">
+    <a href="/listings/new">Airbnb your home</a>
+    <% if(!currUser) { %>
+      <a href="/signup"><b>Sign up</b></a>
+      <a href="/login"><b>Log in</b></a>
+    <% } %>
+    <% if(currUser) { %>
+      <a href="/logout"><b>Log out</b></a>
+    <% } %>
+  </div>
+</nav>
+
+<script>
+const toggler = document.getElementById('wlToggler');
+const menu = document.getElementById('wlMenu');
+const mqDesktop = window.matchMedia('(min-width: 992px)');
+
+function closeMenu(){
+  menu.classList.remove('show');
+  toggler.setAttribute('aria-expanded','false');
+}
+
+toggler.addEventListener('click', (e)=>{
+  e.preventDefault();
+  const open = menu.classList.toggle('show');
+  toggler.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+document.addEventListener('click', (e)=>{
+  if (mqDesktop.matches) return;
+  if (!menu.contains(e.target) && !toggler.contains(e.target)) closeMenu();
+});
+
+document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeMenu(); });
+
+mqDesktop.addEventListener('change', () => closeMenu());
+</script>
