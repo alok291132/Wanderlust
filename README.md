@@ -36,10 +36,10 @@ It aims to provide a smooth browsing experience , with a modern and responsive U
 ## 🎥 Demo
 
 ### 🏡 Homepage
-![Homepage Screenshot](./public/images/Listing.jpeg)
+![Homepage Screenshot](./public/images/Homepage.jpeg)
 
 ### 🏠 Listing Details
-![Listing Screenshot](./public/images/Homepage.jpeg)
+![Listing Screenshot](./public/images/Listing.jpeg )
 
 
 
