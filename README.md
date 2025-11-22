@@ -1,6 +1,6 @@
 # 🏡 Wanderlust — Travel Listing Web App
 
-*Live Demo:* [https://wanderlust-xmg5.onrender.com/listings](https://wanderlust-4g2n.onrender.com/listings)
+*Live Demo:* [https://wanderlust-xmg5.onrender.com/listings](https://wanderlust-xmg5.onrender.com/listings)
 
 Wanderlust is a full-stack web application  — allowing users to *list properties (homes, villas, or apartments), **browse stays, and **share reviews*.  
 It’s built with the goal of creating a simple, clean, and extensible travel-stay platform where new features like *hotel booking, maps integration, and payment systems* can easily be added in the future.
@@ -36,10 +36,10 @@ It aims to provide a smooth browsing experience , with a modern and responsive U
 ## 🎥 Demo
 
 ### 🏡 Homepage
-![Homepage Screenshot](./public/images/Homepage.png)
+![Homepage Screenshot](./public/images/Homepage.jpeg)
 
 ### 🏠 Listing Details
-![Listing Screenshot](./public/images/Listing.png)
+![Listing Screenshot](./public/images/Listing.jpeg)
 
 
 
@@ -137,4 +137,4 @@ It aims to provide a smooth browsing experience , with a modern and responsive U
 
    - 📧 Email: [av388428@gmail.com](mailto:adityanshu45@gmail.com)  
    - 🌐 GitHub: [alok291132](https://github.com/Adityanshu45)  
-   - 🚀 Live Project: [https://wanderlust-xmg5.onrender.com/listings](https://wanderlust-4g2n.onrender.com/listings)
+   - 🚀 Live Project: [https://wanderlust-xmg5.onrender.com/listings](https://wanderlust-xmg5.onrender.com/listings)
