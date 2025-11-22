@@ -288,8 +288,35 @@ body {
       padding-right: 0;
    }
 
+
    /* Map */
+
    #map { 
       height: 400px;
-      width: 80vh;
+      width: 100%;        /* full width */
+   }
+
+
+   @media (max-width: 993px) {
+      #map {
+         width: 100%;        /* Full width on mobile */
+         height: 300px;      /* Adjust height for smaller screens */
+         display: flex;
+         align-items: center;
+         padding: 10px;
+      }
+   }
+
+/* Very small phones */
+  @media (max-width: 600px) {
+      #map {
+         height: 250px;
+      }
+   }
+
+/* Extra small */
+   @media (max-width: 400px) {
+      #map {
+         height: 200px;
+      }
    }
