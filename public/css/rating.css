@@ -195,3 +195,38 @@
   -webkit-transition: background-position .7s;
   transition: background-position .7s;
 }
+
+.card {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Default (desktop) */
+.starability-result {
+    max-width: 100%;
+    display: inline-block;
+    transform-origin: left center;
+}
+
+/* Mobile / Tablet (<= 770px) */
+@media (max-width: 770px) {
+    .starability-result {
+        transform: scale(0.8);  /* Reduce size */
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .card-body {
+        overflow: hidden; /* Prevents any overflow from stars */
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .starability-result {
+        transform: scale(0.7);
+    }
+}
+
