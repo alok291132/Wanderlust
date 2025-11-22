@@ -71,7 +71,7 @@ It aims to provide a smooth browsing experience , with a modern and responsive U
 ## ⚙ Installation
 
 - Clone the repository and install dependencies
-- git clone https://github.com/Adityanshu45/Wanderlust
+- git clone https://github.com/alok291132/Wanderlust
 - cd wanderlust
 - npm install
 
