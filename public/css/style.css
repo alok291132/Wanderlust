@@ -61,6 +61,7 @@ body {
         scrollbar-width:thin; 
     }
 
+
     .filter a{
         text-decoration: none;
         color: black;
@@ -214,7 +215,7 @@ body {
     transform: translateY(0);
   }
 
-  .wl-menu a{ display: block; padding: 10px 0; }
+  .wl-menu a{ display: block; padding: 10px 0; text-align: end;}
 
   /* Explore stays visible beside icon (not in dropdown) */
   .wl-explore { display:inline-block; }
@@ -283,6 +284,7 @@ body {
    .btns {
       display: flex;
    }
+   
    .show-card {
       padding-left: 0;
       padding-right: 0;
@@ -320,3 +322,165 @@ body {
       }
    }
 
+   /* @media (max-width: 500px) {
+      .card {
+         margin-left: 1rem !important;
+         margin-right: 1rem !important;
+         width: 100% !important;
+      }
+   } */
+
+   .card {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;     /* Center karta hai — left/right margin fix */
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%;
+    margin: 0 10px;   /* Thoda side space for mobile */
+  }
+}
+
+/* Expolre button */
+
+@media (max-width: 550px) {
+  .wl-explore {
+    display: none;
+  }
+}
+
+/* Show.ejs responsive */
+
+    .btns {
+    display: flex;
+    gap: 0.1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+
+/* Buttons ke default size */
+.btns a,
+.btns button {
+    width: 8rem;
+    height: 2.8rem;
+    font-size: 1rem;
+    
+}
+
+/* Phone / 1050px se niche responsive */
+@media (max-width: 1050px) {
+    .btns {
+        flex-direction: row;   /* phone me vertically */
+        align-items: center;
+        display: flex;
+    }
+
+    .btns a,
+    .btns button {
+        width: 8rem !important;   /* phone size */
+        height: 2.3rem !important;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+
+    /* All columns full width */
+    .col-6, 
+    .col-8, 
+    .col-5 {
+        width: 100% !important;
+    }
+
+    /* Remove all offsets */
+    .offset-3, 
+    .offset-5 {
+        margin-left: 0 !important;
+    }
+
+    /* Card ko center me aur full width */
+    .listing-card,
+    .show-card,
+    .card {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Buttons row fix */
+    .btns {
+        justify-content: flex-start !important;
+        gap: 0.5rem !important;
+    }
+
+    .btns a,
+    .btns button {
+        width: 7rem !important;
+    }
+
+    /* Map full width */
+    #map {
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
+
+/* Edit.ejs responsive */
+
+  /* FULL RESPONSIVE FOR EDIT LISTING PAGE */
+@media (max-width: 768px) {
+
+    /* Full width form */
+    .col-8, 
+    .col-md-4, 
+    .col-md-8 {
+        width: 100% !important;
+    }
+
+    /* Remove offsets */
+    .offset-2 {
+        margin-left: 0 !important;
+    }
+
+    /* All inputs full width */
+    .form-control {
+        width: 100% !important;
+    }
+
+    /* Image responsive */
+    img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    /* Category layout grid */
+    .category {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .category div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Edit button full width on phone */
+    .edit-btn {
+        width: 100% !important;
+    }
+}
+
+/* Tablet Optimization */
+@media (max-width: 992px) {
+    .category {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
