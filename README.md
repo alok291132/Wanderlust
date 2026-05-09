@@ -132,7 +132,7 @@ It aims to provide a smooth browsing experience , with a modern and responsive U
 
 ## 👨‍💻 Author
 
-*Aditya Chaudhary*                                                                                                      
+*Alok Verma*                                                                                                      
  BN College Of Engineering And Technology Lucknow– CSE (AI & ML)
 
    - 📧 Email: [av388428@gmail.com](mailto:adityanshu45@gmail.com)  
